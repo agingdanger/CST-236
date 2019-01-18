@@ -20,7 +20,7 @@
 
 				//echo "Connected to " . $dbname . " as " . $username;
 				//echo "<br> login name: " . $attemptedLoginName . "<br>" . $attemptedPassword . "<br>";
-				$sql_statement = "SELECT * FROM `userinfo` WHERE `Email` = '$attemptedLoginEmail' AND `Password` = '$attemptedPassword' LIMIT 1";
+				$sql_statement = "SELECT * FROM `userinfo_table` WHERE `Email` = '$attemptedLoginEmail' AND `Password` = '$attemptedPassword' LIMIT 1";
 				$result = mysqli_query($connection, $sql_statement);
 				if ($result) {
 					if (mysqli_num_rows($result) == 1) {

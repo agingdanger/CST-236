@@ -20,7 +20,7 @@
 					$Password = $_POST['Keycode'];
 			
 				//input all the data from the form into the database
-					$addToTable = "INSERT INTO `userinfo` (`ID`, `FName`, `LName`, `Email`, `Password`) VALUES (NULL, '$FirstName', '$LastName', '$EmailAdd', '$Password')";
+					$addToTable = "INSERT INTO `userinfo_table` (`ID`, `FName`, `LName`, `Email`, `Password`) VALUES (NULL, '$FirstName', '$LastName', '$EmailAdd', '$Password')";
 				//add input and let user know if it works
 					if (mysqli_query($connection, $addToTable)) 
 					{
