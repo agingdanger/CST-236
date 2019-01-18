@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!--
 	Kevin George
-	Prof. Hun
-	CST-236
-	1-15-2019
+	Prof. Sluiter
+	CST-126
+	12-9-2018
 -->
 <html lang ="en">
 	<head>
@@ -11,22 +11,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--viewport defined to scale for all devices-->
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"> <!--backwards compatabillity with IE/edge products-->
 		<title> Login </title> <!-- tab title display -->
+		<link rel="stylesheet" href="loginStyle.css"> <!-- style sheet being pulled from -->
 	</head>
 	<body>
-		<h1>
-			Join Our Blog!
-		</h1>
-		<form action="registerDB.php" method="post"> <!-- form name + type + variable stored to pass to insertUser.php -->
-			First Name:<br> <input type="text" name="Fname" class="input" required="required">
-			Last Name:<br> <input type="text" name="Lname" class="input" required="required">
-			Email:<br> <input type="email" name="Email" class="input" required="required">
-			Password:<br> <input type="password" name="Keycode" class="input" required="required">
-			<button type="submit" class="button">
-				Register
-			</button>
-			<p>
-				Already registered? click<a href="login.html">here</a>to login!
-			</p>
-		</form>
+		<div class="picture_one">
+			<h1 class="htext">
+				Join Our Blog!
+			</h1>
+		</div>
+		<section class="section"> <!-- blue background + vaguely centered form -->
+			<form action="registerDB.php" method="post"> <!-- form name + type + variable stored to pass to insertUser.php -->
+				<div class="row"> <!--row to hold the four columns-->
+					<div class="quadcolumn"> <!--columns set to 25% width of the page-->
+						First Name:<br> <input type="text" name="Fname" class="input" required="required">
+					</div>
+					<div class="quadcolumn">
+						Last Name:<br> <input type="text" name="Lname" class="input" required="required">
+					</div>
+					<div class="quadcolumn">
+						Email:<br> <input type="email" name="Email" class="input" required="required">
+					</div>
+					<div class="quadcolumn">
+						Password:<br> <input type="password" name="Keycode" class="input" required="required">
+					</div>
+				</div>
+				<div class="row"> <!--new row to hold the button-->
+					<button type="submit" class="button">
+						Register
+					</button>
+					<p class="lightLink">
+						Already registered? click<a href="login.html">here</a>to login!
+					</p>
+				</div>
+			</form>
+		</section>
+		<div class="picture_two">
+		</div>
 	</body>
 </html>
