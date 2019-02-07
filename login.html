@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!--
 	Kevin George
-	Prof. Hun
-	CST-236
-	1-15-2019
+	Prof. Sluiter
+	CST-126
+	12-9-2018
 -->
 <html lang ="en">
 	<head>
@@ -11,18 +11,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--viewport defined to scale for all devices-->
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"> <!--backwards compatabillity with IE/edge products-->
 		<title> Login </title> <!-- tab title display -->
+		<link rel="stylesheet" href="loginStyle.css"> <!-- style sheet being pulled from -->
 	</head>
 	<body>
-		<h1>
-			Join Our Blog!
-		</h1>
-		<form action="loginDB.php" method="post"> <!-- form name + type + variable stored to pass to insertUser.php -->
-			Email:<br> <input type="email" name="Email" class="input" required="required">
-			Password:<br> <input type="password" name="Keycode" class="input" required="required">
-			<button type="submit" class="button">
-				Login
-			</button>
-		</form>
-		Not registered? click<a href="register.html">here</a>to make your free account!
+		<div class="picture_one">
+			<h1 class="htext">
+				Join Our Blog!
+			</h1>
+		</div>
+		<section class="section"> <!-- blue background + vaguely centered form -->
+			<form action="loginDB.php" method="post"> <!-- form name + type + variable stored to pass to insertUser.php -->
+				<div class="row"> <!--row to hold the four columns-->
+					<div>
+						Email:<br> <input type="email" name="Email" class="input" required="required">
+					</div>
+					<div>
+						Password:<br> <input type="password" name="Keycode" class="input" required="required">
+					</div>
+				</div>
+				<div class="row"> <!--new row to hold the button-->
+					<button type="submit" class="button">
+						Login
+					</button>
+				</div>
+			</form>
+			<p class="lightLink">
+				Not registered? click<a href="register.html">here</a>to make your free account!
+			</p>
+		</section>
+		<div class="picture_two">
+		</div>
 	</body>
 </html>
