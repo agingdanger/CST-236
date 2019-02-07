@@ -18,9 +18,10 @@
 					$LastName = $_POST['Lname'];
 					$EmailAdd = $_POST['Email'];
 					$Password = $_POST['Keycode'];
+					$Username = $_POST['Username'];
 			
 				//input all the data from the form into the database
-					$addToTable = "INSERT INTO `userinfo_table` (`ID`, `FName`, `LName`, `Email`, `Password`) VALUES (NULL, '$FirstName', '$LastName', '$EmailAdd', '$Password')";
+					$addToTable = "INSERT INTO `l426moc0o088s6g9.User` (`UID`, `Email`, `FName`, `LName`, `Password`, `Username`) VALUES (NULL, '$FirstName', '$LastName', '$EmailAdd', '$Password', '$Username')";
 				//add input and let user know if it works
 					if (mysqli_query($connection, $addToTable)) 
 					{

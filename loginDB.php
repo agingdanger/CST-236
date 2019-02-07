@@ -15,18 +15,18 @@
 			require_once 'db_connector.php';
 
 			if ($connection) {
-				$attemptedLoginEmail = $_POST['Email'];
+				$attemptedLoginUsername = $_POST['Username'];
 				$attemptedPassword = $_POST['Keycode'];
 
 				//echo "Connected to " . $dbname . " as " . $username;
 				//echo "<br> login name: " . $attemptedLoginName . "<br>" . $attemptedPassword . "<br>";
-				$sql_statement = "SELECT * FROM `userinfo_table` WHERE `Email` = '$attemptedLoginEmail' AND `Password` = '$attemptedPassword' LIMIT 1";
+				$sql_statement = "SELECT * FROM `l426moc0o088s6g9.User` WHERE `Username` = '$attemptedLoginUsername' AND `Password` = '$attemptedPassword' LIMIT 1";
 				$result = mysqli_query($connection, $sql_statement);
 				if ($result) {
 					if (mysqli_num_rows($result) == 1) {
 						//echo "Login successful<br>";
 						$row = mysqli_fetch_assoc($result);
-						$_SESSION['userEmail'] = $row['Email'];
+						$_SESSION['userUsername'] = $row['Username'];
 						$_SESSION['userid'] = $row['ID'];
 						$_SESSION['userName'] = $row['FName'];
 						header('Location: userHome.php');
