@@ -95,6 +95,11 @@ body, html /*standard body elements*/
     float: left;
     width: 25%;
 }
+.quintcolumn /*page with five columns split equally*/
+{
+    float: left;
+    width: 25%;
+}
 .row:after
 {
 	content: "";
