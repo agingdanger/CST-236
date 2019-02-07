@@ -21,7 +21,7 @@
 					$Username = $_POST['Username'];
 			
 				//input all the data from the form into the database
-					$addToTable = "INSERT INTO `User` (`UID`, `Email`, `FName`, `LName`, `Password`, `Username`) VALUES ('', '$FirstName', '$LastName', '$EmailAdd', '$Password', '$Username')";
+					$addToTable = "INSERT INTO `User` (`UID`, `Email`, `FName`, `LName`, `Password`, `Username`) VALUES (NULL, '$FirstName', '$LastName', '$EmailAdd', '$Password', '$Username')";
 				//add input and let user know if it works
 					if (mysqli_query($connection, $addToTable)) 
 					{
