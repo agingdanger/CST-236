@@ -35,7 +35,7 @@
 		</section>
 		<section class="section">
 			<?php
-				elseif (isset($_POST['SP']))
+				if (isset($_POST['SP']))
 				{
 					$page = "Product.php";
 				}
