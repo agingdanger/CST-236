@@ -26,9 +26,9 @@
 					if (mysqli_num_rows($result) == 1) {
 						//echo "Login successful<br>";
 						$row = mysqli_fetch_assoc($result);
-						$_SESSION['userUsername'] = $row['Username'];
-						$_SESSION['userid'] = $row['ID'];
-						$_SESSION['userName'] = $row['FName'];
+						$_SESSION['userName'] = $row['Username'];
+						$_SESSION['userID'] = $row['ID'];
+						$_SESSION['keycode'] = $row['Password'];
 						header('Location: userHome.php');
 					}
 					else {
