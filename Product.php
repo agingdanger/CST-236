@@ -1,20 +1,19 @@
 <?php
 	class Product
 	{
-		$p = new Product();
-		$products = $p->findProducts();
+// 		$p = new Product();
+// 		$products = $p->findProducts();
 		
-		if($products){
-			print_r($products);
-		}
-		else
-		{
-			echo "No Products Found<br>";
-		}
+// 		if($products){
+// 			print_r($products);
+// 		}
+// 		else
+// 		{
+// 			echo "No Products Found<br>";
+// 		}
+
 		function findProducts()
-		{
-			$db = new Database();
-			
+		{		
 			
 			$sql_query = "SELECT * FROM l426moc0o088s6g9.Product";
 			
