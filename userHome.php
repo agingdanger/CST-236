@@ -26,9 +26,9 @@
 			<form method="post">
 				<button type="submit" class="buttonLight" name="CP">Create Post</button>
 				<button type="submit" class="buttonLight" name='SP'>Search Products</button>
-				<?php if($_SESSION['Role'] == "admin"):?>
+				<?php //if($_SESSION['Role'] == "admin"):?>
 					<button type="submit" class="buttonLight" name='SAP'>Show Admin Page</button>
-				<?php endif;?>
+				<?php //endif;?>
 				<button type="submit" class="buttonLight" formaction="logout.php">Logout</button>
 			</form>
 	
