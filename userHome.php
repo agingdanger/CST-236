@@ -35,7 +35,7 @@
 		</section>
 		<section class="section">
 			<?php
-				/*if (isset($_POST['SP']))
+				if (isset($_POST['SP']))
 				{
 					$page = "Product.php";
 				}
@@ -46,7 +46,7 @@
 				else
 				{
 					$page = "clean.html";
-				}*/
+				}
 			?>
 			<iframe height="150%" width="95%" src="<?php echo $page?>" class="framing"></iframe>
 		</section>
