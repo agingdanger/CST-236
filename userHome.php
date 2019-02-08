@@ -37,7 +37,7 @@
 			<?php
 				if (isset($_POST['SP']))
 				{
-					$page = "Product.php";
+					$page = "search.html";
 				}
 				elseif (isset($_POST['SAP']))
 				{
