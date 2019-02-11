@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'Product.php';
+require_once 'productService.php';
 
 $searchPhrase = $_GET['name'];
 
