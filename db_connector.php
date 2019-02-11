@@ -13,7 +13,7 @@ private $dbname = "l426moc0o088s6g9";
 
 // Create connection
     function getConnection(){
-    $connection = mysqli_connect($servername, $username, $password, $dbname);
+    $connection = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname);
     
         if($connection->connect_error){
             echo "Connection Failed " . $connection->connect_error . "<br>";
