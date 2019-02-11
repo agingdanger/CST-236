@@ -1,5 +1,4 @@
 <?php
-
 class Product{
        
     private $PID;
