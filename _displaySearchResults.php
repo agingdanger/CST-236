@@ -6,9 +6,10 @@
 //print_r($persons);
 
 for($x = 0; $x < count($products); $x++){
-    echo $products[$x]['FIRST_NAME'] . "     ";
-    echo $products[$x]['LAST_NAME'] .  "     ";
-    echo $products[$x]['ID'] .  "     ";
+    echo $products[$x]['PID'] . "     ";
+    echo $products[$x]['PName'] .  "     ";
+    echo $products[$x]['PDescription'] .  "     ";
+    echo $products[$x]['PPrice'] .  "     ";
     echo "<br>";
     
 }
