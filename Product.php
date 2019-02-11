@@ -1,46 +1,87 @@
 <?php
-	class Product
-	{
-// 		$p = new Product();
-// 		$products = $p->findProducts();
-		
-// 		if($products){
-// 			print_r($products);
-// 		}
-// 		else
-// 		{
-// 			echo "No Products Found<br>";
-// 		}
 
-		function findProducts()
-		{		
-			
-			$sql_query = "SELECT * FROM l426moc0o088s6g9.Product";
-			
-			$connection = $db->getConnection();
-			
-			$result = $connection->query($sql_query);
-			
-			if(! $result){
-				echo "Assume the SQL statement has an error";
-				return null;
-				exit();
-			}
-			
-			if($result->num_rows == 0){
-				echo "0";
-				return null;
-			}
-			else
-			{
-				
-				$product_array = array();
-				
-				while($product = $result->fetch_assoc()){
-					array_push($product_array,$product);	
-				}
-				return $product_array;
-			}
-		}
-	}
+class Product{
+       
+    private $PID;
+    private $PName;
+    private $PDescription;
+    private $PPrice;
+    
+    public function __construct($pi, $pn, $pd, $pp){
+        $this->PID = $pi;
+        $this->PName = $pn;
+        $this->PDescription = $pd;
+        $this->PPrice = $pp;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getPID()
+    {
+        return $this->PID;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPName()
+    {
+        return $this->PName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPDescription()
+    {
+        return $this->PDescription;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPPrice()
+    {
+        return $this->PPrice;
+    }
+
+    /**
+     * @param mixed $PID
+     */
+    public function setPID($PID)
+    {
+        $this->PID = $PID;
+    }
+
+    /**
+     * @param mixed $PName
+     */
+    public function setPName($PName)
+    {
+        $this->PName = $PName;
+    }
+
+    /**
+     * @param mixed $PDescription
+     */
+    public function setPDescription($PDescription)
+    {
+        $this->PDescription = $PDescription;
+    }
+
+    /**
+     * @param mixed $PPrice
+     */
+    public function setPPrice($PPrice)
+    {
+        $this->PPrice = $PPrice;
+    }
+
+    
+    
+   
+    
+}
+
 ?>
