@@ -4,11 +4,11 @@ require_once 'Product.php';
 
 $searchPhrase = $_GET['name'];
 
-$p = new Product();
+$p = new productService();
 
 
 
-$persons = $p->findProducts($searchPhrase);
+$products = $p->findProducts($searchPhrase);
 
 
 
@@ -18,7 +18,7 @@ $persons = $p->findProducts($searchPhrase);
 
 <?php
 
-if($persons){
+if($products){
     //we got some results
  
     include("_displaySearchResults.php");
