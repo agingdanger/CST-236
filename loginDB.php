@@ -13,6 +13,10 @@
 			session_start();
 
 			require_once 'db_connector.php';
+			
+			$db = new db_connector();
+			
+			$connection = $db->getConnection();
 
 			if ($connection) {
 				$attemptedLoginUsername = $_POST['Username'];
