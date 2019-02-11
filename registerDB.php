@@ -12,6 +12,11 @@
 			<?php
 				session_start();
 				require_once 'db_connector.php';
+				
+				$db = new db_connector();
+				
+				$connection = $db->getConnection();
+				
 				if($connection)
 				{
 					$FirstName = addslashes($_POST['Fname']); //php variables set to html names. $_POST used to avoid sensitive info from showing up in the address bar
