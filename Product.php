@@ -1,5 +1,5 @@
 <?php
-class Product{
+/*class Product{
        
     private $PID;
     private $PName;
@@ -15,7 +15,7 @@ class Product{
     
     /**
      * @return mixed
-     */
+     
     public function getPID()
     {
         return $this->PID;
@@ -23,7 +23,7 @@ class Product{
 
     /**
      * @return mixed
-     */
+     
     public function getPName()
     {
         return $this->PName;
@@ -31,7 +31,7 @@ class Product{
 
     /**
      * @return mixed
-     */
+     
     public function getPDescription()
     {
         return $this->PDescription;
@@ -39,7 +39,7 @@ class Product{
 
     /**
      * @return mixed
-     */
+     
     public function getPPrice()
     {
         return $this->PPrice;
@@ -47,7 +47,7 @@ class Product{
 
     /**
      * @param mixed $PID
-     */
+     
     public function setPID($PID)
     {
         $this->PID = $PID;
@@ -55,7 +55,7 @@ class Product{
 
     /**
      * @param mixed $PName
-     */
+     
     public function setPName($PName)
     {
         $this->PName = $PName;
@@ -63,7 +63,7 @@ class Product{
 
     /**
      * @param mixed $PDescription
-     */
+     
     public function setPDescription($PDescription)
     {
         $this->PDescription = $PDescription;
@@ -71,7 +71,7 @@ class Product{
 
     /**
      * @param mixed $PPrice
-     */
+     
     public function setPPrice($PPrice)
     {
         $this->PPrice = $PPrice;
@@ -81,6 +81,6 @@ class Product{
     
    
     
-}
+}*/
 
 ?>
