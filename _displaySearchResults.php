@@ -6,7 +6,7 @@
 		<title> Login </title> <!-- tab title display -->
 	</head>
 	<body>
-		<table>
+		<table class="ttext">
     			<tr>
         			<td>
         				ID
