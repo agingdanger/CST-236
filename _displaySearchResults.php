@@ -35,7 +35,7 @@
                 echo "<td>" . $products[$x]['PName'] . "<td>";
                 echo "<td>" . $products[$x]['PDescription'] .  "<td>";
                 echo "<td>" . $products[$x]['PPrice'] . "<td>";
-                echo "</tr>";
+                
                 
                 ?>
                 <form action="productPage.php">
@@ -44,6 +44,7 @@
                 </form>
                 	
                 <?php 
+                echo "</tr>";
             }
         ?>
         </table>
