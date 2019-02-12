@@ -7,7 +7,6 @@
 	</head>
 	<body>
 		<table>
-			<thead>
     			<tr>
         			<td>
         				ID
@@ -21,8 +20,7 @@
         			<td>
         				Product Price
         			</td>
-        		</tr>
-    		</thead>				
+        		</tr>			
 		<?php 
             // Expects an array of $person. Display the results in a table.
             //require_once 'SearchHandler.php';
