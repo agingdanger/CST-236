@@ -37,6 +37,13 @@
                 echo "<td>" . $products[$x]['PPrice'] . "<td>";
                 echo "</tr>";
                 
+                ?>
+                <form action="productPage.php">
+                <input type = "hidden" name = "id" value = " <?php echo $products[$x]['PID'] ?> "></input>
+                <button type = "submit">Details</button>
+                </form>
+                	
+                <?php 
             }
         ?>
         </table>
