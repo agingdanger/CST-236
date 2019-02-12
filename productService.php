@@ -7,7 +7,7 @@ class productService{
         
         $products = Array();
         
-        $dbService = new productService();
+        $dbService = new userProductService();
         $products = $dbService->findProducts($n);
         
         return $products;
