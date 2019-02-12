@@ -3,7 +3,7 @@ require_once 'userProductService.php';
 
 class productService{
     
-    function findBySearch($n){
+    function findProducts($n){
         
         $products = Array();
         
