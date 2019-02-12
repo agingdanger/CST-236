@@ -7,19 +7,22 @@
 	</head>
 	<body>
 		<table>
-			<td>
-				ID
-			</td>
-			<td>
-				Product Name
-			</td>
-			<td>
-				Product Department
-			</td>
-			<td>
-				Product Price
-			</td>
-				
+			<thead>
+    			<tr>
+        			<td>
+        				ID
+        			</td>
+        			<td>
+        				Product Name
+        			</td>
+        			<td>
+        				Product Department
+        			</td>
+        			<td>
+        				Product Price
+        			</td>
+        		</tr>
+    		</thead>				
 		<?php 
             // Expects an array of $person. Display the results in a table.
             //require_once 'SearchHandler.php';
