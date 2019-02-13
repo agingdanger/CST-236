@@ -2,7 +2,7 @@
 
 require_once 'productService.php';
 
-$searchPhrase = $_GET['product'];
+$searchPhrase = $_POST['product'];
 
 $p = new productService();
 
