@@ -22,13 +22,12 @@ error_reporting(E_ALL);
 		function findProducts($n)
 		{		
 		    $db = new db_connector();
-		    $connection = $db->getConnection();
-		    $stmt = $connection->prepare("SELECT PID, PName, PDescription, PPrice FROM l426moc0o088s6g9.Product WHERE PID OR PName OR PDescription OR PPrice LIKE '%$n%'");
-		    $like_n = "%" . $n . "%";
-		    $stmt->bind_param("s", $like_n);
-		    $stmt->execute();
-		    $result = $stmt->get_result();
-			//$result = $connection->query($sql_query);
+			
+			$sql_query = "SELECT PID, PName, PDescription, PPrice FROM l426moc0o088s6g9.Product WHERE PID OR PName OR PDescription OR PPrice LIKE '%$n%'";
+			
+			$connection = $db->getConnection();
+			
+			$result = $connection->query($sql_query);
 			
 			if(! $result){
 				echo "Assume the SQL statement has an error";
