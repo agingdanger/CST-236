@@ -20,7 +20,6 @@ $products = $p->findProducts($searchPhrase);
 
 if($products){
     //we got some results
- 
     include("_displaySearchResults.php");
 }
 else{

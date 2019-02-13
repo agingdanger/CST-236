@@ -23,7 +23,7 @@ error_reporting(E_ALL);
 		{		
 		    $db = new db_connector();
 			
-			$sql_query = "SELECT PID, PName, PDescription, PPrice FROM l426moc0o088s6g9.Product WHERE PID OR PName OR PDescription OR PPrice LIKE '%$n%'";
+			$sql_query = "SELECT * FROM l426moc0o088s6g9.Product WHERE PID LIKE '%$n%' OR PName LIKE '%$n%' OR PDescription LIKE '%$n%' OR PPrice LIKE '%$n%'";
 			
 			$connection = $db->getConnection();
 			
