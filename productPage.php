@@ -70,6 +70,7 @@ error_reporting(E_ALL);
 				            ?>
 				          	</tr>
 		    		</table>
+		    		
 		    		<div class = "container" ></div>
 		    		<h3>Image should be here</h3>
 		    		<div class = "img-box">
