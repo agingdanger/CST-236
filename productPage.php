@@ -58,6 +58,7 @@ error_reporting(E_ALL);
 				    echo "<td>" . $product_array[$x]['PName'] . "<td>";
 				    echo "<td>" . $product_array[$x]['PDescription'] .  "<td>";
 				    echo "<td>" . $product_array[$x]['PPrice'] . "<td>";
+				    echo [$picture_array][$x]['IMG'];
 				    ?>
 				    
 				    
