@@ -59,13 +59,15 @@ error_reporting(E_ALL);
 				    echo "<td>" . $product_array[$x]['PDescription'] .  "<td>";
 				    echo "<td>" . $product_array[$x]['PPrice'] . "<td>";
 				    
-				    for($x = 0; $x < count($picture_array); $x++)
-				    {
-				        if($product_array[$x]['PDescription'] == $picture_array[$x]['PicDescription'])
+				    
+				    for($y = 0; $y < count($picture_array); $y++){
+				        if($product_array[$x]['PDescription'] == $picture_array[$y]['PicDescription'])
 				        {
 				            echo "<td"> print [$picture_array][$x]['IMG'];
 				        }
 				    }
+				   
+// 				 
 				
 				}
 				
