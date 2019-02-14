@@ -75,6 +75,7 @@ error_reporting(E_ALL);
 		    		<h3>Image should be here</h3>
 		    		<div class = "img-box">
 		    			<p><strong><?php echo $picture_array[$y]['IMG']; ?></strong></p>
+		    			</div>
 		    			<?php 
 				            
 				        }
