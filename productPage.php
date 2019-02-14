@@ -58,8 +58,11 @@ error_reporting(E_ALL);
 				    echo "<td>" . $product_array[$x]['PName'] . "<td>";
 				    echo "<td>" . $product_array[$x]['PDescription'] .  "<td>";
 				    echo "<td>" . $product_array[$x]['PPrice'] . "<td>";
+				    ?>
 				    
-				    
+				    </tr>
+		    		</table>
+		    		<?php 
 				    for($y = 0; $y < count($picture_array); $y++){
 				        if($product_array[$x]['PDescription'] == $picture_array[$y]['PicDescription'])
 				        {
@@ -78,11 +81,11 @@ error_reporting(E_ALL);
 			
 			
 			
-			</tr>
+
 			
 		
 		
-		</table>
+
 	
 	
 	
