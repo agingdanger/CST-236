@@ -60,7 +60,8 @@ error_reporting(E_ALL);
 				    echo "<td>" . $product_array[$x]['PPrice'] . "<td>";
 				    //print "<td>" . $picture_array[$x]['IMG'] . "<td>";
 				    
-				    echo '<img src="data:image/jpeg;base64,'.base64_encode( $picture_array[$x]['IMG'] ).'"/>';
+				    echo '<img src="data:image/jpg;base64,'.base64_encode( $picture_array[$x]['IMG'] ).'"/>';
+				    
 				    for($y = 0; $y < count($picture_array); $y++){
 				        if($product_array[$x]['PDescription'] == $picture_array[$y]['PicDescription'])
 				        {
@@ -69,6 +70,7 @@ error_reporting(E_ALL);
 				            ?>
 				          	</tr>
 		    		</table>
+		    		
 		    		<table class = "cont">
 
 						<tr>
