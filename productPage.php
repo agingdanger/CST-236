@@ -60,7 +60,7 @@ error_reporting(E_ALL);
 				    echo "<td>" . $product_array[$x]['PPrice'] . "<td>";
 				    //print "<td>" . $picture_array[$x]['IMG'] . "<td>";
 				    
-				    echo '<a href="productPage.php"><img src="https://github.com/agingdanger/CST-236/blob/master/Automotive.jpg" /></a>';
+				    echo '<a href="productPage.php"><img src="https://raw.githubusercontent.com/agingdanger/CST-236/master/Automotive.jpg" /></a>';
 				    
 				    for($y = 0; $y < count($picture_array); $y++){
 				        if($product_array[$x]['PDescription'] == $picture_array[$y]['PicDescription'])
