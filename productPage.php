@@ -67,8 +67,10 @@ error_reporting(E_ALL);
 				        if($product_array[$x]['PDescription'] == $picture_array[$y]['PicDescription'])
 				        {
 				        
-				            echo [$picture_array][$x]['IMG'];
-				            
+				            echo [$picture_array][$y]['IMG'];
+				            ?>
+				           <img src=" data:image/jpeg;base64, <?php echo base64_encode($picture_array[$y]['IMG']); ?>" class="latest_images img-responsive img-thumbnail" alt="Cinque Terre" >';
+				            <?php 
 				        }
 				    }
 				   
