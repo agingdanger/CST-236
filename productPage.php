@@ -60,8 +60,7 @@ error_reporting(E_ALL);
 				    echo "<td>" . $product_array[$x]['PPrice'] . "<td>";
 				    ?>
 				    
-				    </tr>
-		    		</table>
+				    
 		    		<?php 
 				    for($y = 0; $y < count($picture_array); $y++){
 				        if($product_array[$x]['PDescription'] == $picture_array[$y]['PicDescription'])
@@ -69,8 +68,14 @@ error_reporting(E_ALL);
 				        
 				            echo [$picture_array][$y]['IMG'];
 				            ?>
-				           <img src=" data:image/jpeg;base64, <?php echo base64_encode($picture_array[$y]['IMG']); ?>" class="latest_images img-responsive img-thumbnail" alt="Cinque Terre" >';
-				            <?php 
+				          	</tr>
+		    		</table>
+		    		<div class = "container" ></div>
+		    		<h3>Image should be here</h3>
+		    		<div class = "img-box">
+		    			<p><strong><?php echo $picture_array[$y]['IMG']; ?></strong></p>
+		    			<?php 
+				            
 				        }
 				    }
 				   
