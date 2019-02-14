@@ -54,15 +54,16 @@ error_reporting(E_ALL);
 				for($x = 0; $x < count($product_array); $x++)
 				{
 				    echo "<tr>";
-				    echo "<td>" . $products[$x]['PID'] . "<td>";
-				    echo "<td>" . $products[$x]['PName'] . "<td>";
-				    echo "<td>" . $products[$x]['PDescription'] .  "<td>";
-				    echo "<td>" . $products[$x]['PPrice'] . "<td>";
+				    echo "<td>" . $product_array[$x]['PID'] . "<td>";
+				    echo "<td>" . $product_array[$x]['PName'] . "<td>";
+				    echo "<td>" . $product_array[$x]['PDescription'] .  "<td>";
+				    echo "<td>" . $product_array[$x]['PPrice'] . "<td>";
+				    
 				    for($x = 0; $x < count($picture_array); $x++)
 				    {
-				        if($product[$x]['PDescription'] == $picture[$x]['PicDescription'])
+				        if($product_array[$x]['PDescription'] == $picture_array[$x]['PicDescription'])
 				        {
-				            echo "<td"> print [$picture][$x]['IMG'];
+				            echo "<td"> print [$picture_array][$x]['IMG'];
 				        }
 				    }
 				
