@@ -70,12 +70,16 @@ error_reporting(E_ALL);
 				            ?>
 				          	</tr>
 		    		</table>
-		    		
-		    		<div class = "container" ></div>
-		    		<h3>Image should be here</h3>
-		    		<div class = "img-box">
-		    			<p><strong><?php echo $picture_array[$y]['IMG']; ?></strong></p>
-		    			</div>
+		    		<table class = "cont">
+
+						<tr>
+							<td>Picture</td>
+							<tr>
+							<td>
+						<?php echo $picture_array[$y]['IMG']; ?>
+		    				<td>
+		    			</tr>
+		    			</table>
 		    			<?php 
 				            
 				        }
