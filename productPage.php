@@ -1,3 +1,11 @@
+<?php 
+require_once 'db_connector.php';
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+?>
+
 <!DOCTYPE html>
 <html lang ="en">
 	<head>
@@ -18,7 +26,49 @@
 				<td>Price</td>
 				<td>Picture</td>
 				
-			
+				<?php 
+				$id = $_POST['id'];
+				$db = new db_connector();
+				
+				$sql_query = "SELECT * FROM l426moc0o088s6g9.Product WHERE PID = '$id'";
+				
+				$sql_query2 = "SELECT * FROM l426moc0o088s6g9.Picture";
+				
+				$connection = $db->getConnection();
+				
+				$result = $connection->query($sql_query);
+				$result2 = $connection->query($sql_query2);
+				$product_array = array();
+				$picture_array = array();
+				
+				while($product = $result->fetch_assoc()){
+				    array_push($product_array,$product);
+				}
+				
+				while($picture = $result2->fetch_assoc()){
+				    array_push($picture_array,$picture);
+				}
+				
+				
+				
+				for($x = 0; $x < count($product_array); $x++)
+				{
+				    echo "<tr>";
+				    echo "<td>" . $products[$x]['PID'] . "<td>";
+				    echo "<td>" . $products[$x]['PName'] . "<td>";
+				    echo "<td>" . $products[$x]['PDescription'] .  "<td>";
+				    echo "<td>" . $products[$x]['PPrice'] . "<td>";
+				    for($x = 0; $x < count($picture_array); $x++)
+				    {
+				        if($product[$x]['PDescription'] == $picture[$x]['PicDescription'])
+				        {
+				            echo "<td"> print [$picture][$x]['IMG'];
+				        }
+				    }
+				
+				}
+				
+				?>
 			
 			
 			
