@@ -5,24 +5,34 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--viewport defined to scale for all devices-->
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"> <!--backwards compatability with IE/edge products-->
 		<title>
-			Search
+			Item Information
 		</title> <!-- tab title display -->
 		<link rel="stylesheet" href="loginStyle.css"> <!-- style sheet being pulled from -->
 	</head>
 	<body>
-		 <form action = "searchHandler.php" method = "post">
-		 	Product Name:<br>
-		 	<input type="text" name="product" ><br>
-			<input type="submit" value="Submit">
-		</form> 
+		<table class = "productInfo">
+			<tr>
+				<td>ID</td>
+				<td>Name</td>
+				<td>Department</td>
+				<td>Price</td>
+				<td>Picture</td>
+				
+			
+			
+			
+			
+			
+			</tr>
+			
+		
+		
+		</table>
+	
+	
+	
 	</body>
-
-
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        Select image to upload:
-        <input type="file" name="image"/>
-        <input type="submit" name="submit" value="UPLOAD"/>
-    </form>
-
-
+	
+	
+	
 </html>

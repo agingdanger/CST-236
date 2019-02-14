@@ -20,7 +20,7 @@
         			<td>
         				Product Price
         			</td>
-        		</tr>			
+        				
 		<?php 
             // Expects an array of $person. Display the results in a table.
             //require_once 'SearchHandler.php';
@@ -38,15 +38,18 @@
                 
                 
                 ?>
-                <form action="productPage.php">
+                <td> Product Info
+                <form action="productPage.php" method = "POST">
                 <input type = "hidden" name = "id" value = " <?php echo $products[$x]['PID'] ?> "></input>
                 <button type = "submit">Details</button>
                 </form>
+                </td>
                 	
                 <?php 
                 echo "</tr>";
             }
         ?>
+        </tr>	
         </table>
 	</body>
 </html>
