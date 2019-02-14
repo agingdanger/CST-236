@@ -67,7 +67,7 @@ error_reporting(E_ALL);
 				        if($product_array[$x]['PDescription'] == $picture_array[$y]['PicDescription'])
 				        {
 				        
-				            print [$picture_array][$x]['IMG'];
+				            echo [$picture_array][$x]['IMG'];
 				            
 				        }
 				    }
