@@ -58,9 +58,9 @@ error_reporting(E_ALL);
 				    echo "<td>" . $product_array[$x]['PName'] . "<td>";
 				    echo "<td>" . $product_array[$x]['PDescription'] .  "<td>";
 				    echo "<td>" . $product_array[$x]['PPrice'] . "<td>";
-				    echo "<td>" . $picture_array[$x]['IMG'] . "<td>";
+				    print "<td>" . $picture_array[$x]['IMG'] . "<td>";
 				    ?>
-				    
+				    <img src="data:image/jpg;base64,<?php echo base64_encode($picture_array[$x]['IMG']); ?>" class="latest_images img-responsive img-thumbnail" alt="Cinque Terre" >
 				    
 		    		<?php 
 				    for($y = 0; $y < count($picture_array); $y++){
