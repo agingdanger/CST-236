@@ -20,8 +20,8 @@ $productPoints = $_GET['ppoints'];
 //$user_id = $_SESSION['userid'];
 $role = $_SESSION['Role'];
 
-echo "user id " . $_SESSION['userid'];
-if($connection && isset($_SESSION['userUD']) && $role == "Admin"){
+echo "user id " . $_SESSION['userID'];
+if($connection && isset($_SESSION['userID']) && $role == "Admin"){
     
 
 
