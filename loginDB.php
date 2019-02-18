@@ -21,6 +21,7 @@
 			if ($connection) {
 				$attemptedLoginUsername = $_POST['Username'];
 				$attemptedPassword = $_POST['Keycode'];
+;
 
 				//echo "Connected to " . $dbname . " as " . $username;
 				//echo "<br> login name: " . $attemptedLoginName . "<br>" . $attemptedPassword . "<br>";
@@ -33,6 +34,7 @@
 						$_SESSION['userName'] = $row['Username'];
 						$_SESSION['userID'] = $row['ID'];
 						$_SESSION['keycode'] = $row['Password'];
+						$_SESSION['Role'] = $row['Role'];
 						header('Location: userHome.php');
 					}
 					else {
