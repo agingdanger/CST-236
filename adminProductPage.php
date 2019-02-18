@@ -10,6 +10,9 @@ if($_SESSION['Role'] != 'Admin') {
     exit;
 }
 
+$db = new db_connector();
+$connection = $db->getConnection();
+
 $sql_statement = "SELECT * FROM `Product` ";
 
 if($connection)
