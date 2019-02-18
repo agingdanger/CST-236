@@ -1,5 +1,4 @@
  <?php
- require_once"showTopMenu.php";
  require_once 'db_connector.php';
  
  ini_set('display_errors', 1);
@@ -20,6 +19,9 @@
         while ($row = mysqli_fetch_assoc($result)){
             $productName = $row['PName'];
             $productDescription = $row['PDescription'];
+            $productPrice = $row['PPrice'];
+            $productOwnerID = $row['userID'];
+            $productPoints = $row['PPoints'];
         }
     }else{
         echo "there was a problem connecting " . mysqli_error($connection);
@@ -42,8 +44,12 @@
 <p>Fill out all of the fields and submit</p>
 <form action="processEditItem.php">
 	<input type = "hidden" name = "id" value = "<?php echo $id; ?>"></input>
-    Product Title:<input type="text" name="postTitle" value = " <?php echo $productName; ?>"></input><br>
-    Product Description:<textarea rows="5" cols="50" name="postContents"><?php echo $productDescription;?></textarea><br>
+    Product Name:<input type="text" name="pname" value = " <?php echo $productName; ?>"></input><br>
+    Product Description:<textarea rows="5" cols="50" name="pdescription"><?php echo $productDescription;?></textarea><br>
+    Product Price:<input type="text" name="pprice" value = " <?php echo $productPrice; ?>"></input><br>
+    Product Owner ID:<input type="text" name="ownerID" value = " <?php echo $productOwnerID; ?>"></input><br>
+    Product Points:<input type="text" name="ppoints" value = " <?php echo $productPoints; ?>"></input><br>
+    
     <button type="submit">Submit Changes</button>
 </form>
 </div>
