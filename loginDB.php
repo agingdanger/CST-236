@@ -32,7 +32,7 @@
 						//echo "Login successful<br>";
 						$row = mysqli_fetch_assoc($result);
 						$_SESSION['userName'] = $row['Username'];
-						$_SESSION['userID'] = $row['ID'];
+						$_SESSION['userID'] = $row['UID'];
 						$_SESSION['keycode'] = $row['Password'];
 						$_SESSION['Role'] = $row['Role'];
 						header('Location: userHome.php');
