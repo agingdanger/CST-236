@@ -27,7 +27,7 @@
 				<button type="submit" class="buttonLight" name="CP">Create Post</button>
 				<button type="submit" class="buttonLight" name='SP'>Search Products</button>
 				<?php if($_SESSION['Role'] == "Admin"):?>
-					<button type="submit" class="buttonLight" name='SAP'>Show Admin Page</button>
+					<button type="submit" class="buttonLight" name='SAP'>Admin Page</button>
 				<?php endif;?>
 				<button type="submit" class="buttonLight" formaction="logout.php">Logout</button>
 			</form>
@@ -41,7 +41,7 @@
 				}
 				elseif (isset($_POST['SAP']))
 				{
-					$page = "showAdminPage.php";
+					$page = "AdminPage.html";
 				}
 				else
 				{
