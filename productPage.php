@@ -1,9 +1,12 @@
 <?php 
 require_once 'db_connector.php';
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+$db = new db_connector();
+$connection = $db->getConnection();
 ?>
 
 <!DOCTYPE html>
@@ -28,13 +31,13 @@ error_reporting(E_ALL);
 				
 				<?php 
 				$id = $_POST['id'];
-				$db = new db_connector();
+				
 				
 				$sql_query = "SELECT * FROM l426moc0o088s6g9.Product WHERE PID = '$id'";
 				
 				$sql_query2 = "SELECT * FROM l426moc0o088s6g9.Picture";
 				
-				$connection = $db->getConnection();
+				
 				
 				$result = $connection->query($sql_query);
 				$result2 = $connection->query($sql_query2);

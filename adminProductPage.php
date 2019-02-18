@@ -1,17 +1,21 @@
 <?php
 require_once 'db_connector.php';
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 session_start();
+
+$db = new db_connector();
+$connection = $db->getConnection();
 
 if($_SESSION['Role'] != 'Admin') {
     echo "Please login as an admin<br>";
     exit;
 }
 
-$db = new db_connector();
-$connection = $db->getConnection();
+
 
 $sql_statement = "SELECT * FROM `Product` ";
 

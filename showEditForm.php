@@ -1,19 +1,18 @@
-<!-- 
- this is a partial page
- purpose is to show the "Add Recipe" form
- even though the file extension is .php, all of the code is html.
- -->
- 
  <?php
- 
  require_once"showTopMenu.php";
+ require_once 'db_connector.php';
+ 
+ ini_set('display_errors', 1);
+ ini_set('display_startup_errors', 1);
+ error_reporting(E_ALL);
  
  session_start();
  
+ $db = new db_connector();
+ $connection = $db->getConnection();
+ 
  $id = $_GET['ID'];
- 
- require_once 'db_connector.php';
- 
+
  if($connection){
      $sql_statement = "SELECT * FROM `Product` WHERE  `PID` = '$id' LIMIT 1 ";
     $result = mysqli_query($connection, $sql_statement);
