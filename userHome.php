@@ -16,8 +16,9 @@
 				<?php 
 					if (isset($_SESSION['userID'])):
 				?>
-				Welcome! <?php echo $_SESSION['userName'];?>
+				Welcome! <?php echo $_SESSION['userName'];?><br>
 				<?php
+				echo $_SESSION['Role'];
 					endif;
 				?>
 			</h1>
