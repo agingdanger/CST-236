@@ -45,7 +45,7 @@
 <form action="processEditItem.php">
 	<input type = "hidden" name = "id" value = "<?php echo $id; ?>"></input>
     Product Name:<input type="text" name="pname" value = " <?php echo $productName; ?>"></input><br>
-    Product Description:<textarea rows="5" cols="50" name="pdescription"><?php echo $productDescription;?></textarea><br>
+    Product Description:<input type="text" name="pdescription" value = " <?php echo $productDescription;?>"></input><br>
     Product Price:<input type="text" name="pprice" value = " <?php echo $productPrice; ?>"></input><br>
     Product Owner ID:<input type="text" name="ownerID" value = " <?php echo $productOwnerID; ?>"></input><br>
     Product Points:<input type="text" name="ppoints" value = " <?php echo $productPoints; ?>"></input><br>
