@@ -33,7 +33,7 @@ $sql_statement = "UPDATE `Product` SET  `PName` = '$productName', `PDescription`
     if($result){
         echo " number of rows affected" . mysqli_affected_rows($connection);
         echo "Data updated successfully!";
-        echo "click <a href = 'AdminPage.html'>here</a> to return";
+        echo "click <a href = 'AdminPage.php'>here</a> to return";
     }
     else{
         echo "Error in the sql " . mysqli_error($connection);

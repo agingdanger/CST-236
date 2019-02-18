@@ -41,7 +41,7 @@
 				}
 				elseif (isset($_POST['SAP']))
 				{
-					$page = "AdminPage.html";
+					$page = "AdminPage.php";
 				}
 				else
 				{
