@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="loginStyle.css"> <!-- style sheet being pulled from -->
 <?php
 require_once 'db_connector.php';
 
@@ -23,7 +24,9 @@ if($connection)
 {
     $result = mysqli_query($connection, $sql_statement);
     if($result){
-        while($row = mysqli_fetch_assoc($result)){
+        while($row = mysqli_fetch_assoc($result)){?>
+            <section class="section">
+            <?php
             echo "Product ID " . $row['PID'] . "<br>";
             echo "Product Name " . $row['PName'] . "<br>";
             echo "Product Description " . $row['PDescription'] . "<br>";
@@ -31,24 +34,34 @@ if($connection)
             echo "Product's Owner ID " . $row['userID'] . "<br>";
             echo "Product Total Points " . $row['PPoints'] . "<br>";
             ?>
+            <div class="row">
+                <form action="processDeleteItem.php">
+                    <input type = "hidden" name = "ID" value =" <?php echo $row['PID']?>"></input>
+                    <input type = "hidden" name = "name" value = " <?php echo $row['PName']?>"></input>
+                    
+                    <div style="margin-left: auto;margin-right: auto;">
+                        <button type = "submit" class="button">Delete</button>
+                        <button type = "submit"class="button" formaction="showEditForm.php">Edit</button>
+                    </div>
+                </form>
+                <!--<div class="column">
+                    <form action="showEditForm.php">
+                        <input type = "hidden" name = "ID" value =" <?php echo $row['PID']?>"></input>
+                        <input type = "hidden" name = "name" value = " <?php echo $row['PName']?>"></input>
+                        
+                        <button type = "submit"class="button"formaction="showEditForm.php">Edit</button>
+                        </form>
+                </div>-->
+            </div>
             
-            <form action="processDeleteItem.php">
-            <input type = "hidden" name = "ID" value =" <?php echo $row['PID']?>"></input>
-            <input type = "hidden" name = "name" value = " <?php echo $row['PName']?>"></input>
-            
-            <button type = "submit">Delete</button>
-            </form>
-            
-            <form action="showEditForm.php">
-            <input type = "hidden" name = "ID" value =" <?php echo $row['PID']?>"></input>
-            <input type = "hidden" name = "name" value = " <?php echo $row['PName']?>"></input>
-            
-            <button type = "submit">Edit</button>
-            </form>
             
             <?php
             echo "==============<br>";
+            ?>
+            </section>
+            <?php
         }
     }
     
 }
+?>

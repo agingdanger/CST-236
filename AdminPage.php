@@ -27,11 +27,6 @@ session_start();
 	</head>
 	
 	<body>
-		<div class="picture_one">
-			<h1 class="htext">
-				Administrate!
-			</h1>
-		</div>
 		<section class="section"> <!-- blue background + vaguely centered form -->
 			<form action="adminProductPage.php"> 
 				<div class="row"> <!--row to hold the four columns-->
@@ -66,7 +61,5 @@ session_start();
 			
 			</form>
 		</section>
-		<div class="picture_two">
-		</div>
 	</body>
 </html>
