@@ -41,13 +41,13 @@ if($connection)
                     
                     <div style="margin-left: auto;margin-right: auto;">
                         <button type = "submit" class="button">Delete</button>
-                        <button type = "submit"class="button" formaction="showEditForm.php">Edit</button>
+                        <button type = "submit" class="button" formaction="showEditForm.php">Edit</button>
                     </div>
                 </form>
                 <!--<div class="column">
                     <form action="showEditForm.php">
-                        <input type = "hidden" name = "ID" value =" <?php echo $row['PID']?>"></input>
-                        <input type = "hidden" name = "name" value = " <?php echo $row['PName']?>"></input>
+                        <input type = "hidden" name = "ID" value =" <?php //echo $row['PID']?>"></input>
+                        <input type = "hidden" name = "name" value = " <?php //echo $row['PName']?>"></input>
                         
                         <button type = "submit"class="button"formaction="showEditForm.php">Edit</button>
                         </form>
