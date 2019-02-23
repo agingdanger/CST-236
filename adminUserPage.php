@@ -43,9 +43,16 @@ if($connection)
                     
                     <div style="margin-left: auto;margin-right: auto;">
                         <button type = "submit" class="button">Delete</button>
-                        <button type = "submit" class="button" form action="showEditUser.php">Edit</button>
+                        <!--  <button type = "submit" class="button" form action="showEditUser.php">Edit</button>-->
                     </div>
                 </form>
+            <form action="showEditUser.php">
+            <input type = "hidden" name = "ID" value = " <?php echo $row['UID']?>"></input>
+            <input type = "hidden" name = "name" value = " <?php echo $row['FName']?>"></input>
+            <div style="margin-right: auto;margin-left: auto;">
+            <button type = "submit">Edit</button>
+            </div>
+            </form>
             </div>
             
             <!--<form action="showEditUser.php">
