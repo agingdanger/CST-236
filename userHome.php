@@ -31,7 +31,7 @@
 					<button type="submit" class="buttonLight" name='SAP'>Admin Page</button>
 				<?php endif;?>
 				<button type="submit" class="buttonLight" formaction="logout.php">Logout</button>
-				<button type="submit" class="buttonLight" formaction="SH">Shopping Cart</button>
+				<button type="submit" class="buttonLight" name="SH">Shopping Cart</button>
 			</form>
 	
 		</section>

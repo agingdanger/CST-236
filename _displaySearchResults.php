@@ -43,6 +43,10 @@
                 <input type = "hidden" name = "id" value = " <?php echo $products[$x]['PID'] ?> "></input>
                 <button type = "submit">Details</button>
                 </form>
+                <form action="shoppingCart.php" method = "POST">
+                <input type = "hidden" name = "id" value = " <?php echo $products[$x]['PID'] ?> "></input>
+                <button type = "submit">Add to Cart</button>
+                </form>
                 </td>
                 	
                 <?php 
