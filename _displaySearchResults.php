@@ -36,7 +36,7 @@
             
             for($x = 0; $x < count($products); $x++)
             {
-                echo "<tr>";
+                //echo "<tr>";
                 echo "<td>" . $products[$x]['PID'] . "<td>";
                 echo "<td>" . $products[$x]['PName'] . "<td>";
                 echo "<td>" . $products[$x]['PDescription'] .  "<td>";
@@ -58,7 +58,7 @@
                 echo "</tr>";
             }
         ?>
-        </tr>	
+        <!--</tr>	-->
         </table>
 	</body>
 </html>
