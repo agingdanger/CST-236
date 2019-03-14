@@ -21,7 +21,6 @@
 			if ($connection) {
 				$attemptedLoginUsername = $_POST['Username'];
 				$attemptedPassword = $_POST['Keycode'];
-;
 
 				//echo "Connected to " . $dbname . " as " . $username;
 				//echo "<br> login name: " . $attemptedLoginName . "<br>" . $attemptedPassword . "<br>";
@@ -31,6 +30,7 @@
 					if (mysqli_num_rows($result) == 1) {
 						//echo "Login successful<br>";
 						$row = mysqli_fetch_assoc($result);
+						
 						$_SESSION['userName'] = $row['Username'];
 						$_SESSION['userID'] = $row['UID'];
 						$_SESSION['keycode'] = $row['Password'];

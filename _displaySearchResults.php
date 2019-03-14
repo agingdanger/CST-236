@@ -45,11 +45,13 @@
                 
                 ?>
                     <td>
+                    
                     <form action="productPage.php" method = "POST">
                         <input type = "hidden" name = "id" value = " <?php echo $products[$x]['PID'] ?> "></input>
                         <button type = "submit" class="button">Details</button>
                     </form>
                     <form action="shoppingCart.php" method = "POST">
+                    	<input type="text" name="quantity" value = "#"></input>
                         <input type = "hidden" name = "id" value = " <?php echo $products[$x]['PID'] ?> "></input>
                         <button type = "submit" class="button">Add to Cart</button>
                     </form>

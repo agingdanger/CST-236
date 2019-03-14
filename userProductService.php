@@ -50,5 +50,7 @@ error_reporting(E_ALL);
 				return $product_array;
 			}
 		}
+		
+		//function 
 	}
 ?>
