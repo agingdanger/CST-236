@@ -47,7 +47,7 @@
 					$page = "AdminPage.php";
 				}
 				elseif(isset($_POST['SH'])){
-				    $page = "shoppingCart.php";
+				    $page = "userCart.php";
 				}
 				else
 				{

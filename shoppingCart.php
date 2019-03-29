@@ -20,7 +20,7 @@
  $pid = $_POST['id'];
  $quantity = $_POST['quantity'];
  
- $processCart = new processShoppingChart();
+ $processCart = new processShoppingCart();
  /*
  $db = new db_connector();
  
