@@ -25,6 +25,7 @@
  
  $processCart->addProductID($id);
  
+echo "pid: " . $pid . ", quantity: " . $quantity;
  $pastorderquery = $processCart->insert($pid, $quantity);
  
  if($pastorderquery){
