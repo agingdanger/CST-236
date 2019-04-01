@@ -59,7 +59,7 @@ class processShoppingChart
         $pastorders = "SELECT * FROM l426moc0o088s6g9.`Order List` WHERE OLID = LAST_INSERT_ID()";
         //$result3 = $connection->query($insert);
         
-        $pastorderquery = $connection->query($pastorders);
+        $pastorderquery = $conn->query($pastorders);
         
         return $pastorderquery;
     }
