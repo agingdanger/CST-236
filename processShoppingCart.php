@@ -57,7 +57,7 @@ class processShoppingChart
         
         $insert = "INSERT INTO l426moc0o088s6g9.`Order List` (productID, PQuantity, orderID) VALUES('$pid', '$quantity', '$orderID')";
         $pastorders = "SELECT * FROM l426moc0o088s6g9.`Order List` WHERE OLID = LAST_INSERT_ID()";
-        $result3 = $connection->query($insert);
+        //$result3 = $connection->query($insert);
         
         $pastorderquery = $connection->query($pastorders);
         
