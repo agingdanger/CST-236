@@ -22,43 +22,10 @@
  $quantity = $_POST['quantity'];
  
  $processCart = new processShoppingChart();
- /*
- $db = new db_connector();
  
- $connection = $db->getConnection();
-
- $sql_statement = "INSERT INTO l426moc0o088s6g9.Order (userID) VALUES ('$id')";
- $result = mysqli_query($connection, $sql_statement);
- if($result){
+ $processCart->addProductID($id);
  
-
- }
- */
- $processCart->addProductID();
- 
- 
- //echo $sql_statement;
- 
- 
- /*
- $ordered = "SELECT * FROM l426moc0o088s6g9.Order WHERE OID = LAST_INSERT_ID()";
- $result2 = mysqli_query($connection, $ordered);
- if($result2){
-     while($row = mysqli_fetch_assoc($result2))
-     {
-        $orderID =  $_SESSION['orderID'] = $row['OID'];  
-     }
- }
- */
-$pastorderquery = $processCart->insert($pid, $quantity);
- 
-/*
- $insert = "INSERT INTO l426moc0o088s6g9.`Order List` (productID, PQuantity, orderID) VALUES('$pid', '$quantity', '$orderID')";
- $pastorders = "SELECT * FROM l426moc0o088s6g9.`Order List` WHERE OLID = LAST_INSERT_ID()";
- $result3 = $connection->query($insert);
-
-*/
- $pastorderquery = $processCart->addProductID();
+ $pastorderquery = $processCart->insert($pid, $quantity);
  
  if($pastorderquery){
 

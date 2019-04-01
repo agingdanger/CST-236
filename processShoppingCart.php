@@ -8,7 +8,7 @@ session_start();
 
 class processShoppingChart
 {
-    public function addProductID()
+    public function addProductID($id)
     {
     $db = new db_connector();
     $conn = $db->getConnection();
@@ -27,7 +27,7 @@ class processShoppingChart
         {
             $orderID =  $_SESSION['orderID'] = $row['OID'];
             
-            return $orderID;
+            //return $orderID;
         }
     }
     }
