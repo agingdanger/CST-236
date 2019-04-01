@@ -9,6 +9,7 @@
 	<body>
  <?php
  require_once 'db_connector.php';
+ require_once 'processShoppingCart.php';
  
  ini_set('display_errors', 1);
  ini_set('display_startup_errors', 1);
@@ -20,7 +21,7 @@
  $pid = $_POST['id'];
  $quantity = $_POST['quantity'];
  
- $processCart = new processShoppingCart();
+ $processCart = new processShoppingChart();
  /*
  $db = new db_connector();
  
