@@ -37,10 +37,10 @@
             for($x = 0; $x < count($products); $x++)
             {
                 //echo "<tr>";
-                echo "<td>" . $products[$x]['PID'] . "<td>";
-                echo "<td>" . $products[$x]['PName'] . "<td>";
-                echo "<td>" . $products[$x]['PDescription'] .  "<td>";
-                echo "<td>" . $products[$x]['PPrice'] . "<td>";
+                echo "<td>" . $products[$x]['PID'] . "</td>";
+                echo "<td>" . $products[$x]['PName'] . "</td>";
+                echo "<td>" . $products[$x]['PDescription'] .  "</td>";
+                echo "<td>" . $products[$x]['PPrice'] . "</td>";
                 
                 
                 ?>
