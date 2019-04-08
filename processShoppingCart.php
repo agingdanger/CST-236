@@ -59,6 +59,35 @@ class processShoppingCart
         
         return $pastorderquery;
     }
+    public function getPName($productID){
+        $db = new db_connector();
+        $conn = $db->getConnection();
+        
+        $getnamequery = "SELECT * FROM l426moc0o088s6g9.`Product` WHERE PID = '$productID'";
+        
+        $result4 = $conn->query($getnamequery);
+        
+        if($result4){
+            
+            $name_array = array();
+            
+            while($order = $result4->fetch_assoc()){
+                array_push($name_array,$order);
+            }
+            if($name_array){
+                for($x = 0; $x < count($name_array); $x++)
+                {
+                    $name = $name_array[$x]['PName'];
+                }
+            }
+       
+        return $name;
+        }
+        else{
+            $name = "No name found";
+            return $name;
+        }
+    }
     
     
 }

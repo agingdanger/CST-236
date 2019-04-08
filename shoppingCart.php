@@ -11,7 +11,7 @@
  
  require_once 'db_connector.php';
  require_once 'processShoppingCart.php';
- 
+ $oid = $_SESSION['orderID'];
  ini_set('display_errors', 1);
  ini_set('display_startup_errors', 1);
  error_reporting(E_ALL);
@@ -20,7 +20,7 @@
  //user id
  $id = $_SESSION['userID'];
  //order id to be set by current user
- $oid = $_SESSION['orderID'];
+
  //product id
  $pid = $_POST['id'];
  

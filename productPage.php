@@ -28,6 +28,7 @@ $connection = $db->getConnection();
 				<td>Department</td>
 				<td>Price</td>
 				<td>Picture</td>
+				<td>Mem</td>
 				
 				<?php 
 				$id = $_POST['id'];
@@ -56,19 +57,25 @@ $connection = $db->getConnection();
 				
 				for($x = 0; $x < count($product_array); $x++)
 				{
+				    
 				    echo "<tr>";
 				    echo "<td>" . $product_array[$x]['PID'] . "<td>";
 				    echo "<td>" . $product_array[$x]['PName'] . "<td>";
 				    echo "<td>" . $product_array[$x]['PDescription'] .  "<td>";
 				    echo "<td>" . $product_array[$x]['PPrice'] . "<td>";
+				    echo "<td>" . $product_array[$x]['PSource'] . "<td>";
+				    
 				    //print "<td>" . $picture_array[$x]['IMG'] . "<td>";
 				    
-				    echo '<a href="productPage.php"><img src="https://raw.githubusercontent.com/agingdanger/CST-236/master/Pictures/Automotive.jpg" /></a>';
+				    //echo '<a href="productPage.php"><img src="https://raw.githubusercontent.com/agingdanger/CST-236/master/Pictures/Automotive.jpg" /></a>';
 				    
+				    //$video = '<iframe width="640" height="360" src="https://i.imgur.com/16Np16F.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+				    
+				    //echo $video;
 				    for($y = 0; $y < count($picture_array); $y++){
 				        if($product_array[$x]['PDescription'] == $picture_array[$y]['PicDescription'])
 				        {
-				        
+				            
 				            echo [$picture_array][$y]['IMG'];
 				            ?>
 				          	</tr>

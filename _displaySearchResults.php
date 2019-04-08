@@ -24,8 +24,13 @@
                     <td>
                         Product Info
                     </td>
+                    <td>
+                    	Product
+                    </td>
+                    
                 </tr>
                 <tr>
+                
         				
 		<?php 
             // Expects an array of $person. Display the results in a table.
@@ -41,6 +46,9 @@
                 echo "<td>" . $products[$x]['PName'] . "</td>";
                 echo "<td>" . $products[$x]['PDescription'] .  "</td>";
                 echo "<td>" . $products[$x]['PPrice'] . "</td>";
+                echo "<td>" . $products[$x]['PSource'] . "</td>";
+
+                
                 
                 
                 ?>
@@ -58,6 +66,7 @@
                     </td>
                 <?php 
                 echo "</tr>";
+               
             }
         ?>
         <!--</tr>	-->
