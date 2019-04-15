@@ -6,45 +6,46 @@ error_reporting(E_ALL);
 
 require_once 'cardDataService.php';
 
-class cardBusinessService{
-    
-    
-    
-    public function getCreditInfo($id){
-        
+class cardBusinessService
+{
+
+    public function getCreditInfo($id)
+    {
         $cardData = new cardDataService();
         $processCard = new cardBusinessService();
         $userID = $_SESSION['userID'];
         $result = $cardData->getCreditInfo($userID);
-        
+
         if($result)
         {
             $card_array = array();
-            
-            while ($cards = $result->fetch_assoc()){
-                array_push($card_array,$cards);
+
+            while($cards = $result->fetch_assoc())
+            {
+                array_push($card_array, $cards);
             }
             return $card_array;
         }
-        else{
+        else
+        {
             return;
         }
-        
     }
-    
-    public function addCreditInfo($cn, $fn, $mi, $ln, $ex, $cc, $dc, $cv, $am){
-        
+
+    public function addCreditInfo($cn, $fn, $mi, $ln, $ex, $cc, $dc, $cv, $am)
+    {
         $cardData = new cardDataService();
         $result = $cardData->addCreditInfo($cn, $fn, $mi, $ln, $ex, $cc, $dc, $cv, $am);
-        
+
         return $result;
     }
-    
-    public  function deleteCreditInfo($id){
-        
+
+    public function deleteCreditInfo($id)
+    {
+    }
+
+    public function updateCreditInfo($id)
+    {
     }
     
-     public  function updateCreditInfo($id){
-        
-    }
 }
