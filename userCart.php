@@ -60,9 +60,11 @@ if($currentorderquery){
                    
                     
                 <?php 
+                $total = 0;
                 for($x = 0; $x < count($cart_array); $x++)
                 {
                     $pname = $processCart->getPName($cart_array[$x]['productID']);
+                    
                     //echo "<tr>";
                     echo "<td>" . $pname . "</td>";
                     echo "<td>" . $cart_array[$x]['OLID'] . "</td>";
@@ -74,17 +76,11 @@ if($currentorderquery){
                 ?>
                 <td>
                     
-                    <form action="productPage.php" method = "POST">
-                        <input type = "hidden" name = "id" value = " <?php echo $products[$x]['PID'] ?> "></input>
-                        <button type = "submit" class="button">Details</button>
-                    </form>
-                    <form action="shoppingCart.php" method = "POST">
-                    	<input type="text" name="quantity" value = "#"></input>
-                        <input type = "hidden" name = "id" value = " <?php echo $products[$x]['PID'] ?> "></input>
-                        <button type = "submit" class="button">Add to Cart</button>
-                    </form>
+                    
                 </td>
+                </table>
                    <?php 
+                   echo $processCart->getPrice();
                 
             }
      }
@@ -97,5 +93,16 @@ else{
 }
             
         ?>
+        
+          <form action="productPage.php" method = "POST">
+                        <input type = "hidden" name = "id" value = " <?php echo $cart_array[$x]['productID'] ?> "></input>
+                        <button type = "submit" class="button">Details</button>
+                    </form>
+        <form action="creditCard.php" method = "POST">
+        	<input type="text" name="quantity" value = "#"></input>
+            <input type = "hidden" name = "id" value = " <?php echo $_SESSION['userID'] ?> "></input>
+            <button type = "submit" class="button">Add a payment method</button>
+        </form>
+   
     </body>
 </html>

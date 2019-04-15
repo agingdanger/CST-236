@@ -89,6 +89,49 @@ class processShoppingCart
         }
     }
     
+    public function getPrice()
+    {
+        // TODO Return the total price of the products selected: 
+        $db = new db_connector();
+        $conn = $db->getConnection();
+        
+        $stmt = "SELECT `Order List`.orderID, `Order List`.PQuantity, `Product`.PPrice, `Product`.PID
+            FROM `Order List`
+            LEFT JOIN `Product`
+            ON `Order List`.productID = `Product`.PID";
+        
+        $result5 = $conn->query($stmt);
+        
+        if($result5){
+            $price_array = array();
+            
+            while($price = $result5->fetch_assoc()){
+                array_push($price_array,$price);
+            }
+            $total = 0;
+            $curr = 0;
+            for($x = 0; $x < count($price_array); $x++)
+            {
+                //echo "price array " . $price_array[$x]['orderID'] . "<br>";
+                //echo "session order id " . $_SESSION['orderID'] . "<br>";
+                
+                if($price_array[$x]['orderID'] == $_SESSION['orderID']){
+                  
+                    
+//                     echo $price_array[$x]['orderID'];
+//                     echo $price_array[$x]['PQuantity'];
+                    
+                    $curr = ((float)$price_array[$x]['PPrice'] * (float)$price_array[$x]['PQuantity']);
+                    $total = $total + $curr;
+                    $curr = 0;
+                    
+                }
+            }
+            echo "$" . $total;
+        }
+        
+    }
+    
     
 }
 
