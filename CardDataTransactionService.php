@@ -1,6 +1,7 @@
 <?php
 
 require_once 'db_connector.php';
+require_once 'Card.php';
 
 class CardDataTransactionService
 {// class opens
@@ -11,10 +12,10 @@ class CardDataTransactionService
         $this->conn = $conn;
     }
     
-    function getBalance()
+    function getBalance($id)
     {
         // run query to get balance:
-        $sql = "SELECT BALANCE FROM CHECKING";
+        $sql = "SELECT AMOUNT FROM CARDS WHERE CARDNUMBER LIKE ";
         $result = $this->conn->query($sql);
         
         if($result->num_rows == 0)
@@ -25,17 +26,15 @@ class CardDataTransactionService
         {
             // return balance
             $row = $result->fetch_assoc();
-            $balance = $row['BALANCE'];
-            return $balance;
+            $amount = $row['AMOUNT'];
+            return $amount;
         }
     }
     
-    function updateBalance($bal)
+    function updateBalance($amount)
     {
-        // get a database connection:
-        
         // run query to get balance:
-        $sql = "UPDATE CHECKING SET BALANCE=$bal";
+        $sql = "UPDATE CARDS SET AMOUNT=$amount";
         $result = $this->conn->query($sql);
         
         if($result)
