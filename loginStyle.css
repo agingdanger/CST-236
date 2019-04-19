@@ -103,6 +103,11 @@ body, html /*standard body elements*/
     float: left;
     width: 20%;
 }
+.sixtcolumn /*page with six columns split equally*/
+{
+	float: left;
+	width: 16%;
+}
 .row:after
 {
 	content: "";

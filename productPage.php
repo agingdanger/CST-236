@@ -21,100 +21,88 @@ $connection = $db->getConnection();
 		<link rel="stylesheet" href="loginStyle.css"> <!-- style sheet being pulled from -->
 	</head>
 	<body>
-		<table class = "productInfo">
-			<tr>
-				<td>ID</td>
-				<td>Name</td>
-				<td>Department</td>
-				<td>Price</td>
-				<td>Picture</td>
-				<td>Mem</td>
-				
-				<?php 
-				$id = $_POST['id'];
-				
-				
-				$sql_query = "SELECT * FROM l426moc0o088s6g9.Product WHERE PID = '$id'";
-				
-				$sql_query2 = "SELECT * FROM l426moc0o088s6g9.Picture";
-				
-				
-				
-				$result = $connection->query($sql_query);
-				$result2 = $connection->query($sql_query2);
-				$product_array = array();
-				$picture_array = array();
-				
-				while($product = $result->fetch_assoc()){
-				    array_push($product_array,$product);
-				}
-				
-				while($picture = $result2->fetch_assoc()){
-				    array_push($picture_array,$picture);
-				}
-				
-				
-				
-				for($x = 0; $x < count($product_array); $x++)
-				{
-				    
-				    echo "<tr>";
-				    echo "<td>" . $product_array[$x]['PID'] . "<td>";
-				    echo "<td>" . $product_array[$x]['PName'] . "<td>";
-				    echo "<td>" . $product_array[$x]['PDescription'] .  "<td>";
-				    echo "<td>" . $product_array[$x]['PPrice'] . "<td>";
-				    echo "<td>" . $product_array[$x]['PSource'] . "<td>";
-				    
-				    //print "<td>" . $picture_array[$x]['IMG'] . "<td>";
-				    
-				    //echo '<a href="productPage.php"><img src="https://raw.githubusercontent.com/agingdanger/CST-236/master/Pictures/Automotive.jpg" /></a>';
-				    
-				    //$video = '<iframe width="640" height="360" src="https://i.imgur.com/16Np16F.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-				    
-				    //echo $video;
-				    for($y = 0; $y < count($picture_array); $y++){
-				        if($product_array[$x]['PDescription'] == $picture_array[$y]['PicDescription'])
-				        {
-				            
-				            echo [$picture_array][$y]['IMG'];
-				            ?>
-				          	</tr>
-		    		</table>
-		    		
-		    		<table class = "cont">
+		<section class="section">
+			<div class="row">
+				<div class="sixtcolumn">
+					ID
+				</div>
+				<div class="sixtcolumn">
+					Name
+				</div>
+				<div class="sixtcolumn">
+					Department
+				</div>
+				<div class="sixtcolumn">
+					Price
+				</div>
+				<div class="sixtcolumn">
+					Picture
+				</div>
+				<div class="sixtcolumn">
+					Mem
+				</div>
+			</div>
+			<div class="row">
+				<?php
+					$id = $_POST['id'];
+					$sql_query = "SELECT * FROM l426moc0o088s6g9.Product WHERE PID = '$id'";
+					$sql_query2 = "SELECT * FROM l426moc0o088s6g9.Picture";
+					$result = $connection->query($sql_query);
+					$result2 = $connection->query($sql_query2);
+					$product_array = array();
+					$picture_array = array();
 
-						<tr>
-							<td>Picture</td>
-							<tr>
-							<td>
-						<?php echo $picture_array[$y]['IMG']; ?>
-		    				<td>
-		    			</tr>
-		    			</table>
-		    			<?php 
-				            
-				        }
-				    }
-				   
-// 				 
-				
-				}
-				
+					while($product = $result->fetch_assoc())
+					{
+						array_push($product_array,$product);
+					}
+					
+					while($picture = $result2->fetch_assoc())
+					{
+						array_push($picture_array,$picture);
+					}
+
+					for($x = 0; $x < count($product_array); $x++)
+					{
 				?>
-			
-			
-			
-			
-
-			
-		
-		
-
-	
-	
-	
+				<div class="sixtcolumn">
+					<?php
+						echo $product_array[$x]['PID'];
+					?>
+				</div>
+				<div class="sixtcolumn">
+					<?php
+						echo $product_array[$x]['PName'];
+					?>
+				</div>
+				<div class="sixtcolumn">
+					<?php
+						echo $product_array[$x]['PDescription'];
+					?>
+				</div>
+				<div class="sixtcolumn">
+					<?php
+						echo $product_array[$x]['PPrice'];
+					?>
+				</div>
+				<div class="sixtcolumn">
+					<?php
+						echo $product_array[$x]['PSource'];
+					?>
+				</div>
+				<div class="sixtcolumn">
+					<?php
+						for($y = 0; $y < count($picture_array); $y++)
+						{
+							if($product_array[$x]['PDescription'] == $picture_array[$y]['PicDescription'])
+							{
+								echo [$picture_array][$y]['IMG'];
+							}
+						}
+					}
+					?>
+				</div>
+			</div>
+		</section>
 	</body>
-	
-	
-	
 </html>
