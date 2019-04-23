@@ -36,23 +36,29 @@ $processCart = new processShoppingCart();
 
 // echo "pid: " . $pid . ", quantity: " . $quantity;
 
-if (isset($_SESSION['orderID'])) {
+if(isset($_SESSION['orderID']))
+{
     $pastorderquery = $processCart->insert($pid, $quantity);
-} else {
+}
+else
+{
     // create order and set order id
     $processCart->addProductID($id);
     $pastorderquery = $processCart->insert($pid, $quantity);
 }
 
-if ($pastorderquery) {
+if($pastorderquery)
+{
 
     $cart_array = array();
 
-    while ($order = $pastorderquery->fetch_assoc()) {
+    while($order = $pastorderquery->fetch_assoc())
+    {
         array_push($cart_array, $order);
     }
 
-    if ($cart_array) {
+    if($cart_array)
+    {
         ?>
                 <table class="ttext" style="width: 100%">
 		<tr>
@@ -63,8 +69,9 @@ if ($pastorderquery) {
 		</tr>
                    
                     
-                <?php
-        for ($x = 0; $x < count($cart_array); $x ++) {
+         <?php
+        for($x = 0; $x < count($cart_array); $x ++)
+        {
             // echo "<tr>";
             echo "<td>" . $cart_array[$x]['OLID'] . "</td>";
             echo "<td>" . $cart_array[$x]['productID'] . "</td>";
@@ -73,7 +80,9 @@ if ($pastorderquery) {
             echo "</tr>";
         }
     }
-} else {
+}
+else
+{
     echo "Try more";
 }
 // echo $orderID;
